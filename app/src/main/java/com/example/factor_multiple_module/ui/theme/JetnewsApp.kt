@@ -2,6 +2,7 @@ package com.example.factor_multiple_module.ui.theme
 
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -21,7 +22,12 @@ fun JetnewsApp(
 
         val navBackStackEntry by navController.currentBackStackEntryAsState()
 
-        val 
+        val currentRoute =
+            navBackStackEntry?.destination?.route ?: JetnewsDestinations.HOME_ROUTE
+
+        val isExpandedScreen = widthSizeClass == WindowWidthSizeClass.Expanded
+
+        val sizeAwareDrawerState = rememberSize
 
     }
 }
